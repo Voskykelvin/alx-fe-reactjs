@@ -1,13 +1,13 @@
 // src/App.jsx
-import WelcomeMessage from './components/WelcomeMessage';
-import Header from './Header';
-import MainContent from './MainContent';
-import Footer from './Footer';
-
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+
+import WelcomeMessage from './components/WelcomeMessage';
+import Header from './Header';
+import MainContent from './MainContent';
+import Footer from './Footer';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -34,13 +34,16 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+
+      {/* Your custom components */}
       <div>
-      <WelcomeMessage />
-      <Header />
-      <MainContent />
-      <Footer />
-    </div>
+        <WelcomeMessage />
+        <Header />
+        <MainContent />
+        <Footer />
+      </div>
     </>
   )
 }
+
 export default App;
