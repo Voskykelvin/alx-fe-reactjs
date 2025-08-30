@@ -10,8 +10,6 @@ import MainContent from './MainContent';
 import UserProfile from './components/UserProfile'
 import Footer from './Footer';
 
-// why are you on crack alx?
-
 import UserProfile from './components/UserProfile';
 
 function App() {
@@ -53,11 +51,7 @@ function App() {
         <Footer />
       </div>
     </>
-    stage file for CustomElementRegistry
-    import file
   )
 }
 
 export default App;
-
-//what evendo I add?
