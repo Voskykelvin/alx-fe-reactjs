@@ -1,4 +1,5 @@
 import { create } from 'zustand';
+ [ "favorites", "recommendations"]
 
 const useRecipeStore = create((set, get) => ({
   recipes: [],
@@ -8,6 +9,7 @@ const useRecipeStore = create((set, get) => ({
 
   // New: Recommendations
   recommendations: [],
+ 
 
   // --- Existing recipe actions ---
   addRecipe: (newRecipe) => set((state) => ({
