@@ -1,49 +1,44 @@
 import { create } from 'zustand';
- [ "favorites", "recommendations"]
 
 const useRecipeStore = create((set, get) => ({
   recipes: [],
+  searchTerm: '',
+  filteredRecipes: [],
 
-  // New: Favorites
-  favorites: [],
-
-  // New: Recommendations
-  recommendations: [],
- 
-
-  // --- Existing recipe actions ---
   addRecipe: (newRecipe) => set((state) => ({
     recipes: [...state.recipes, newRecipe],
+    filteredRecipes: [...state.filteredRecipes, newRecipe] // keep filtered in sync
   })),
 
   deleteRecipe: (id) => set((state) => ({
     recipes: state.recipes.filter((r) => r.id !== id),
-    favorites: state.favorites.filter((favId) => favId !== id), // keep favorites clean
+    filteredRecipes: state.filteredRecipes.filter((r) => r.id !== id),
   })),
 
-  updateRecipe: (id, updatedFields) => set((state) => ({
-    recipes: state.recipes.map((r) =>
+  updateRecipe: (id, updatedFields) => set((state) => {
+    const updatedRecipes = state.recipes.map((r) =>
       r.id === id ? { ...r, ...updatedFields } : r
-    ),
-  })),
-
-  // --- Favorites actions ---
-  addFavorite: (recipeId) => set((state) => ({
-    favorites: [...new Set([...state.favorites, recipeId])], // prevent duplicates
-  })),
-
-  removeFavorite: (recipeId) => set((state) => ({
-    favorites: state.favorites.filter((id) => id !== recipeId),
-  })),
-
-  // --- Mock Recommendations ---
-  generateRecommendations: () => {
-    const { recipes, favorites } = get();
-    const recommended = recipes.filter(
-      (recipe) =>
-        favorites.includes(recipe.id) && Math.random() > 0.5
     );
-    set({ recommendations: recommended });
+    return {
+      recipes: updatedRecipes,
+      filteredRecipes: updatedRecipes.filter((r) =>
+        r.title.toLowerCase().includes(state.searchTerm.toLowerCase())
+      ),
+    };
+  }),
+
+  setSearchTerm: (term) => {
+    set({ searchTerm: term });
+    get().filterRecipes(); // trigger filtering whenever search changes
+  },
+
+  filterRecipes: () => {
+    const { recipes, searchTerm } = get();
+    set({
+      filteredRecipes: recipes.filter((recipe) =>
+        recipe.title.toLowerCase().includes(searchTerm.toLowerCase())
+      ),
+    });
   },
 }));
 
