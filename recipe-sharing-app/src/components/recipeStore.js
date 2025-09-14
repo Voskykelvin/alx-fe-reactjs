@@ -48,6 +48,10 @@ const useRecipeStore = create((set, get) => ({
       ),
     };
   }),
+  setRecipes: (recipes) => set(() => ({
+    recipes,
+    filteredRecipes: recipes,
+  })),
 
   // --- Search actions ---
   setSearchTerm: (term) => {
