@@ -5,8 +5,8 @@ import Search from "/.components/Search";
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gray-100">
-      <h1 className="text-3xl font-bold text-center py-6">
+      <div className="flex min-h-screen items-center justify-center bg-gray-100">
+      <h1 className="text-5xl font-extrabold text-blue-600 drop-shadow-lg">
         Github user
         </h1>
         <nav>
