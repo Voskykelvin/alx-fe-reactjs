@@ -5,8 +5,10 @@ import Search from "/.components/Search";
 function App() {
   return (
     <Router>
-      <div>
-      <h1>Github user</h1>
+      <div className="min-h-screen bg-gray-100">
+      <h1 className="text-3xl font-bold text-center py-6">
+        Github user
+        </h1>
         <nav>
           <Link to="/">Home</Link> | <Link to="/repos">Repositories</Link>
         </nav>
