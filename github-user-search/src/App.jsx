@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import RepoList from "./components/RepoList";
-import search from ">?components/search";
+import Search from "/.components/Search";
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
           <Route path="/repos" element={<RepoList />} />
         </Routes>
       </div>
-      <search />
+      <Search />
     </Router>
   );
 }
