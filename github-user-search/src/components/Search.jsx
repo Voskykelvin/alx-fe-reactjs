@@ -54,12 +54,15 @@ function Search() {
       {loading && <p>Loading...</p>}
       {error && <p>{error}</p>}
 
-      {/* Results using .map() ✅ */}
+      {/* Results ✅ includes html_url */}
       <ul>
         {users.map((user) => (
           <li key={user.id}>
             <img src={user.avatar_url} alt={user.login} width="50" />
-            <span>{user.login}</span>
+            <span>{user.login}</span>{" "}
+            <a href={user.html_url} target="_blank" rel="noreferrer">
+              View Profile
+            </a>
           </li>
         ))}
       </ul>
