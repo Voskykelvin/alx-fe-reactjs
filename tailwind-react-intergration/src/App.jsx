@@ -1,17 +1,8 @@
-// src/App.jsx
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-
-import WelcomeMessage from './components/WelcomeMessage';
-import Header from './components/Header';
-import MainContent from './components/MainContent';
-import UserProfile from './components/UserProfile';
-import Footer from './/components/Footer';
-
-// Import Counter
-import Counter from './components/Counter';
+import UserProfile from './src/components'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -38,27 +29,9 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-
-      {/* Your custom components */}
-      <div>
-        <WelcomeMessage />
-        <Header />
-        <MainContent />
-        <UserProfile 
-          name="Alice" 
-          age="25" 
-          bio="Loves hiking and photography" 
-        />
-        <Footer />
-      </div>
-
-      {/*  Add Counter here */}
-      <div>
-        <h2>Counter Example</h2>
-        <Counter />
-      </div>
+      <UserProfile/>
     </>
   )
 }
 
-export default App;
+export default App
