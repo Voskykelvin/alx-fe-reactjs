@@ -3,18 +3,57 @@
     "id": 1,
     "title": "Spaghetti Carbonara",
     "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
-    "image": "https://share.google/images/DvP81ozCEvvNGxK7f"
+    "image": "https://share.google/images/DvP81ozCEvvNGxK7f",
+    "ingredients": [
+        "200g spaghetti",
+        "2 eggs",
+        "100g bacon",
+        "50g Parmesan cheese",
+        "Black pepper to taste"
+    ],
+    "instructions": [
+        "Marinate chicken with yorgut and spices for 1 hour",
+        "Grill or sear chicken until cooked through",
+        "Prepare sauce with tomato puree and cream",
+        "Add grilled chicken to sauce and simmer 10 minutes",
+        "Serve with rice or naan"
+    ]
   },
   {
     "id": 2,
     "title": "Chicken Tikka Masala",
     "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
-    "image": "https://via.placeholder.com/150"
+    "image": "https://via.placeholder.com/150",
+    "ingredients": [
+        "500g chicken breast",
+        "1 cup yorgut",
+        "2 tbsp garam masala",
+        "1/2 cup cream"
+    ],
+    
+    "instructions": [
+        "Cook spaghetti according to package instrucions",
+        "Fry pancetta until crispy",
+        "Whisk eggs and cheese in a bowl",
+        "Combine drained spaghetti with pancetta and egg mixture",
+        "Season with black pepper and serve immediately"
+    ]
   },
   {
     "id": 3,
     "title": "Ugali",
     "summary": "A basic African dish cooked with water and maize flour.",
-    "image": "https://via.placeholder.com/150"
+    "image": "https://via.placeholder.com/150",
+    "ingredients": [
+        "2 and 1/2 glasses of water",
+        "A bowl of maize flour",
+        "1 tbsp margarine"
+    ],
+    "instructions":[
+        "Heat the water until it boils",
+        "Add the flour bits by bits while stirring",
+        "Cook until it is not sticky",
+        "Serve with stew or vegetables"
+    ]
   }
 ]
